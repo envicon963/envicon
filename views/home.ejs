@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Envicon</title>
+  </head>
+  <body>
+    <div class="wallpaper">
+      <nav>
+        <div class="left"><a href="/"><img id="logo" src="logo.png" /></a></div>
+        <div class="right">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn"><div></div><div></div><div></div></button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="/">Home</a>
+            <a href="/about">about</a>
+            <a href="#service">Services</a>
+            <a href="/contact">Contact</a>
+          </div>
+        </div>
+
+      </nav>
+
+      <div class="body">
+        <div class="intro">
+          <h1>WELCOME TO ENVICON</h1>
+          <p class="long-text">
+            A premier HVAC design and build company in the UAE. We have been
+            providing our services to businesses, Fitout, Retails, F&B and
+            homeowners in the UAE for over 10 years, and we are proud to offer
+            our customers the highest quality of workmanship and customer
+            service.
+          </p>
+          <p class="short-text">A premier HVAC design and build company in the UAE.</p>
+          <div class="home_buttons">
+          <button id="service">Call Now! +971502462543</button>
+          <a href="https://wa.me/971502462543" target="_blank"><img class="whatsappL" src="whatsappL.png" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="services">
+      <h1>Our Services</h1>
+      <div class="services_content">
+        <div class="design">
+          <img class="simages" src="Design.png" />
+          <h3>HVAC DESIGN</h3>
+          <p>We will work for you to design the perfect HVAC system for your needs.</p>
+          <div class="middle">
+            <button>Call Now! <a href="https://wa.me/971502462543" target="_blank"><img class="whatsapp" src="whatsapp.png" /></a> +971502462543</button>
+          </div>
+        </div>
+
+        <div class="install">
+          <img class="simages" src="install.png" />
+          <h3>HVAC INSTALLATION</h3>
+          <p>We will install your HVAC system with the highest quality of workmanship.</p>
+          <div class="middle">
+            <button>Call Now! <a href="https://wa.me/971502462543" target="_blank"><img class="whatsapp" src="whatsapp.png" /></a> +971502462543</button>
+          </div>
+        </div>
+
+        <div class="repair">
+          <img class="simages" src="repair.png" />
+          <h3>HVAC REPAIR</h3>
+          <p>We will repair your HVAC system quickly and efficiently.</p>
+          <div class="middle">
+            <button>Call Now! <a href="https://wa.me/971502462543" target="_blank"><img class="whatsapp" src="whatsapp.png" /></a> +971502462543</button>
+          </div>
+        </div>
+
+        <div class="maintenance">
+          <img class="simages" src="maintenance.png" />
+          <h3>HVAC MAINTENANCE</h3>
+          <p>We will keep your HVAC system running smoothly and efficiently with regular maintenance.</p>
+          <div class="middle">
+            <button>Call Now! <a href="https://wa.me/971502462543" target="_blank"><img class="whatsapp" src="whatsapp.png" /></a> +971502462543</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mission">
+        <h1>Our Mission</h1>
+        <p>
+          Our mission is to provide our customers with the best possible HVAC
+          solutions. We believe that every customer deserves to have a
+          comfortable and efficient HVAC system, and we are committed to work
+          for our customers to find the perfect solution for their needs.
+        </p>
+        <div class="home_buttons">
+        <div id="btn"><button>Call Now! +971502462543</button></div>
+        <a href="https://wa.me/971502462543" target="_blank"><img class="whatsappL" src="whatsappL.png" /></a>
+        </div>
+        <h5>
+          HVAC DESIGN | HVAC INSTALLATION | HVAC REPAIR | HVAC MAINTENANCE
+        </h5>
+        <h1>We are here to help!</h1>
+      </div>
+
+      <%- include("partials/footer.ejs") -%>
+    </div>
+  </body>
+</html>

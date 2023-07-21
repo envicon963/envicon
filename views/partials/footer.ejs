@@ -1,0 +1,48 @@
+<div class="footer">
+    <img id="logo" src="logo.png">
+    <div class="info">
+    <div class="info_container">
+      <p class="llc">ENVICON ELECTROMECHANICAL WORKS CONT. L.L.C</p>
+      <p><img id="email" src="email_logo.png">envicondxb@gmail.com</p>
+      <P><img id="phone" src="phone_logo.png">+971502462543</P>
+    </div>  
+    </div>
+</div>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script type="text/javascript">
+
+var header = document.querySelector("nav");
+var sticky = header.offsetTop;
+window.onscroll = function(){
+    if(window.pageYOffset > sticky){
+        header.classList.add("sticky");
+    }
+    else{
+        header.classList.remove("sticky");
+    }
+}
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
+</script>
+</body>
+</html>

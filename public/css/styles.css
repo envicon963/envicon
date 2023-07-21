@@ -1,0 +1,637 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+.wallpaper{
+    background-image: url("../wallpaper.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.body{
+    margin:0px;
+    padding:0px;
+    display: flex;
+    justify-content: right;
+    padding-bottom:100px;
+}
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items:center; 
+    font-size: large;
+    top:0;
+    left:0;
+    transition:0.6s;
+    z-index: 10000;
+}
+
+#logo{
+    height:70px;
+    width:150px;
+}
+
+nav ul{
+    display:flex;
+    justify-content: center;
+}
+
+nav ul li{
+    color:#1976D2;
+    list-style: none;
+    margin: 0px 23px;
+    font-weight: 500;
+}
+
+.left{
+    margin-left: 20px;
+    margin:2px 0px 2px 0px;
+}
+
+.left:hover{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.right{
+    padding-right: 20px;
+}
+
+.dropdown-content{
+    display:none;
+
+}
+
+.dropbtn{
+    margin:2px 10px 0px 0px;
+    width:60px;
+}
+
+.dropbtn div{
+        width: 40px;
+        height: 5px;
+        background-color: #007ffe;
+        border-radius: 3px;
+        margin: 6px 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:white;
+    min-width: 160px;
+    border-radius:10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #0080ff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+  }
+
+.show{
+    display:block;
+    translate: -100px;
+}
+
+#wallpaper{
+    height:70vh;
+    width:80vw;
+}
+
+.intro{
+    color:#1976D2;
+    margin:50px 100px 100px 100px;
+    box-sizing: content-box;
+    display:block;
+    height:50vh;
+    width:500px;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.intro p{
+    margin-top:15px;
+    text-align: center;
+}
+
+.sticky{
+    position:fixed;
+    top:0;
+    width:100%;
+    background-color:white;
+}
+
+.simages{
+    height:50vh;
+    width:40vw;
+    border-radius:20px;
+    backface-visibility: hidden;
+    border: 5px solid #1976D2;
+}
+
+.services h1{
+    padding-top: 20px;
+    text-align: center;
+    color:#1976D2;
+    padding-bottom: 0px;
+    font-weight: bold;
+}
+
+.services h3{
+    width:40vw;
+    text-align: center;
+    margin:0px;
+    padding-top:5px;
+    color:#1976D2;
+}
+
+.services_content p{
+    font-weight: bold;
+}
+
+.design, .repair, .maintenance, .install{
+    margin: 2vw 2vw 2vw 6vw;
+    position:relative;
+}
+
+.services_content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.middle{
+
+    height:40vh;
+    width:40vw;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    color:#0080ff;
+    display:block;
+    justify-content: space-around;
+}
+
+.middle p{
+    font-size:2vw;
+    margin:0px;
+}
+
+.middle button{
+    width:20vw;
+    height:8vw;
+    font-size: 2vw;
+    margin-top:0px;
+}
+
+.design:hover .simages {
+    opacity: 0.3;
+  }
+
+  
+.design:hover .middle {
+    opacity: 1;
+  }
+
+.install:hover .simages {
+    opacity: 0.3;
+  }
+  
+.install:hover .middle {
+    opacity: 1;
+  } 
+
+.repair:hover .simages {
+    opacity: 0.3;
+  }
+  
+.repair:hover .middle {
+    opacity: 1;
+  }
+
+.maintenance:hover .simages {
+    opacity: 0.3;
+  }
+  
+.maintenance:hover .middle {
+    opacity: 1;
+  }
+
+button{
+    margin-top: 5vh;
+    width:300px;
+    border:2px solid #007ffe;
+    background-color : white;
+    color:#007ffe;
+    border-radius:10px;
+    font-size: 30px;
+}
+
+.home_buttons{
+    width:300px;
+    margin:0px auto;
+}
+
+.mission{
+    background-color: #ADD8E6;
+    color:#1976D2;
+    padding-bottom: 5vh;
+}
+
+.mission .whatsappL{
+    height:55px;
+    width:300px;
+    margin-top:10px;
+}
+
+.mission h1, h5{
+    padding-top: 20px;
+    text-align: center;
+    color:#1976D2;
+    padding-bottom: 0px;
+}
+
+.mission p{
+    width:60vw;
+    margin:auto;
+    font-size:3.5vh;
+    color:#1976D2;
+    text-align: center;
+}
+
+.footer{
+    padding:0px 0px 10vh 0px;
+    background-color: rgb(95, 95, 95);
+    color:whitesmoke;
+    display:flex;
+}
+
+.llc{
+    padding-top: 10vh;
+}
+
+#email, #phone{
+    height: 40px;
+    width:50px;
+    padding-right: 10px;
+}
+
+.about{
+    background-color: white;
+    padding:10vh 0px 10vh 0px;
+    color:#1976D2;
+}
+
+.about p, h1{
+    text-align: center;
+}
+
+.about ul{
+    width:100vw;
+}
+
+.about li{
+    width:55vw;
+    margin:auto;
+}
+
+.contact{
+    background-color: white;
+    padding-top: 5vh;
+    height:fit-content;
+    display:flex;
+    justify-content: space-around;
+}
+
+.form{
+    padding-left:30px;
+    margin:30px 0px;
+    background-color: white;
+    width:380px;
+    height:475px;
+    border-radius: 10px;
+    color:#007ffe;
+    background-image: url("../wallpaper.avif");
+}
+
+.form h1{
+    text-align: center;
+}
+
+input, textarea{
+    border-radius:5px;
+    border: solid 2px #007ffe;
+}
+
+input[type="submit"]{
+    border:none;
+    background-color:#007ffe;
+    color:white;
+    padding:5px;
+    border-radius: 5px;
+}
+
+
+
+input:focus, textarea:focus{
+    border-radius:5px;
+    border: solid 2px #007ffe;
+}
+
+ul a{
+    text-decoration: none;
+}
+
+button p{
+    font-size: medium;
+}
+
+input, textarea{
+    border:none;
+    border-bottom: 1.5px solid #007ffe; 
+}
+
+.short-text { display: none; }
+
+.dropdown{
+    display:none;
+}
+
+.info{
+    width:100%;
+}
+
+.info_container{
+    width:380px;
+    margin:auto;
+}
+
+.info p{
+    text-align: center;
+}
+
+.services_content p{
+    width:40vw;
+    text-align:center;
+    color:#1976D2;
+}
+
+
+@media screen and (max-width:865px) {
+
+    .long-text{
+        display:none;
+    }
+
+    .short-text{
+        display:inline;
+        margin:0px 50px;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width:683px) {
+
+    .body{
+        justify-content: center;
+    }
+
+    .short-text { display: inline-block; }
+
+    .long-text { display: none; }
+
+    .intro{
+        width:60vw;
+        height:40vh;
+        margin-top:180px;
+    }
+    
+    .intro p{
+        font-size: larger;
+        text-align: center;
+        margin:0px;
+    }
+
+    .dropdown{
+        display:inline-block;
+    }
+
+    .right{
+        display:none;
+    }
+
+    .services_content{
+        display:block;
+    }
+    .simages{
+        height:50vh;
+        width:82vw;
+        border-radius:20px;
+        backface-visibility: hidden;
+        border: 5px solid #1976D2;
+    }
+
+    .middle p{
+        font-size:4vw;
+        margin:0px;
+    }
+
+    .middle button{
+        width:35vw;
+        height:15vw;
+        font-size:4vw;
+    }
+
+    .services h1{
+        font-size: 7vw;
+    }
+
+    .services_content{
+        padding:auto;
+    }
+
+    .design, .install, .maintenance, .repair{
+        margin:auto;
+    }
+
+    .simages{
+        margin-left:10vw;
+    }
+
+    .services_content h3{
+        margin:1vw 30vw 5vw 30vw;
+    }
+
+    .mission h1{
+        font-size: 7vw;
+    }
+
+    .mission p{
+        font-size: 4vw;
+    }
+
+    .footer{
+        display:block;
+    }
+
+    .services_content p{
+        width:100vw;
+        margin-bottom:10px;
+        padding:0px;
+        font-size:larger;
+        font-weight:600;
+    }
+
+    .services_content h3{
+        margin-bottom:5px;
+        font-weight: bold;
+    }
+
+    .contact .form{
+        width:345px;
+    }
+
+    .contact button{
+        width:300px;
+    }
+
+}
+
+@media screen and (max-width:778px){
+
+    .contact{
+        display:block;
+        height:fit-content;
+    }
+
+    .detail{
+        width:300px;
+        margin:0px auto;
+    }
+
+    .form{
+        margin:30px auto;
+    }
+
+    .contact{
+        padding-bottom:50px;
+    }
+
+}
+
+.intro .whatsappL{
+    height:55px;
+    width:300px;
+    margin-top: 10px;
+}
+
+.contact{
+    height:fit-content;
+}
+
+.contact .whatsappL{
+    height:55px;
+    width:300px;
+    margin-top:10px;
+}
+
+.whatsapp{
+    height:30px;
+    width:30px;
+}
+
+
+@media screen and (max-height:500px){
+
+    .whatsappL{
+        display:none;
+    }
+
+    .intro{
+        margin-top:30px;
+    }
+
+    .middle p{
+        font-size:2vw;
+    }
+
+    .middle button{
+        height:55px;
+        width:150px;
+        font-size:x-small;
+    }
+}
+
+@media screen and (max-width:390px){
+
+    .whatsappL{
+        width:20px;
+    }
+
+    .info p{
+        width:50vw;
+    }
+
+    .info_container{
+        width:50vw;
+    }
+
+    .intro button{
+        display:none;
+    }
+
+    .intro .whatsappL{
+        display:none;
+    }
+
+    .simages{
+        height:40vh;
+    }
+
+    .intro h1, .intro p{
+        font-weight: bold;
+        font-size:xx-large;
+    }
+
+    .intro{
+        margin-top:170px;
+    }
+}
+
+.whatsappL{
+    opacity:0.9;
+}
+
+.whatsappL:hover{
+    opacity:1.5;
+}
+
+.success{
+    background-color: white;
+    height:80vh;
+    width:100vw;
+    padding:0px;
+    margin:0px;
+}
+
+.success h1, h3{
+    padding-top:50px;
+    color: #007ffe;
+    text-align: center;
+}

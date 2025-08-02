@@ -20,14 +20,6 @@ app.get("/success", function(req, res){
     res.render("success")
 })
 
-app.get("/about", function(req, res){
-    res.render("about");
-})
-
-app.get("/contact", function(req, res){
-    res.render("contact");
-})
-
 app.post("/contact", function(req, res){
     const name = req.body.name;
     const email = req.body.email;
@@ -52,16 +44,16 @@ app.post("/contact", function(req, res){
         from : process.env.user,
         to: process.env.sendTo,
         subject:"contact form enquiry",
-        text: "Name : " + name + "\nEmail : " + email + "\nPhone Number : " + number + "\nMessage : " + message 
+        text: "Name : " + name + "\nEmail : " + email + "\nPhone Number : " + number + "\nMessage : " + message
     }
 
     transporter.sendMail(mailOptions);
-    
+
     res.redirect("/success");
 })
 
 const port = process.env.PORT || 3000;
 
-app.listen(port, function(){ 
+app.listen(port, function(){
     console.log(`server started on port ${port}`);
 })

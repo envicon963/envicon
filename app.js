@@ -3,12 +3,14 @@ const ejs = require("ejs");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const dotenv = require('dotenv');
+const path = require('path');
 
 dotenv.config();
 
 const app = express();
 app.use(express.urlencoded({extended:true}));
 
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 

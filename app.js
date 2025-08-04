@@ -53,7 +53,13 @@ app.post("/contact", function(req, res){
 })
 
 const port = process.env.PORT || 3000;
+// ... (your existing code)
 
-app.listen(port, function(){
-    console.log(`server started on port ${port}`);
-})
+if (require.main === module) {
+    const port = process.env.PORT || 3000;
+    app.listen(port, function(){
+        console.log(`Server started on port ${port}`);
+    });
+} else {
+    module.exports = app;
+}

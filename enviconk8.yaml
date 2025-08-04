@@ -1,0 +1,54 @@
+# This Kubernetes YAML file defines a Deployment and a Service
+# for your Node.js application, configured for local development.
+
+---
+# Deployment: This object manages a set of identical pods (your application instances).
+# It ensures that a specified number of replicas are always running.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: envicon-deployment
+  labels:
+    app: envicon
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: envicon
+  template:
+    metadata:
+      labels:
+        app: envicon
+    spec:
+      containers:
+        - name: envicon-app
+          image: envicon-app:latest
+          ports:
+            - containerPort: 3000
+          resources:
+            limits:
+              cpu: "250m" # 0.25 of a CPU core
+              memory: "256Mi" # 256 MB of RAM
+            requests:
+              cpu: "100m" # 0.10 of a CPU core
+              memory: "128Mi" # 128 MB of RAM
+          env:
+            - name: NODE_ENV
+              value: "production"
+
+---
+# Service: This object exposes your Deployment to the outside world.
+# It provides a stable IP address and DNS name for your application pods.
+apiVersion: v1
+kind: Service
+metadata:
+  name: envicon-service
+spec:
+  selector:
+    app: envicon
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+      nodePort: 30001
+  type: NodePort
